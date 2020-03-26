@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Smith (R.E. “Bob”) Park</title>
+    <meta name="description" content="Smith (R.E. “Bob”) Park">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script> 
+
+  </head>
+  <body>
+    <a-scene loading-screen="enabled: false" vr-mode-ui="enabled: false">
+      <a-assets>
+        <img id="background" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360bg.png?v=1578610193270">
+        <img id="heron" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fheron.png?v=1574792311109">
+        <img id="pink" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360pink.png?v=1574791875603">
+        <img id="pink-texture" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360pink-texture.png?v=1574791871595">
+        <img id="purp" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360purp.png?v=1574791875614">
+        <img id="purp-texture" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360purp-texture.png?v=1574791874700">
+        <img id="grey" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360grey.png?v=1574791874362">
+        <img id="grey-texture" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360grey-texture.png?v=1574791874377">
+        <img id="blue" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360blue.png?v=1574791874402">
+        <img id="blue-texture" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360blue-texture.png?v=1574792176042">
+        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio> 
+        <img id="troubleimg" crossorigin="anonymous" src="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fexxon1982.png?v=1574809797225">
+        
+        <script id="texturesky" type="text/html">
+          <a-entity 
+            class="texturesky"
+            geometry="primitive: sphere; radius: 30"
+            material="shader: flat; side: double; transparent: true; src: ${texture}"
+            mixin="random"
+            animation__rotate="property: rotation; to: 0 0 0; dur: 15200; easing: easeInOutElastic; elasticity: 200; startEvents: rotate"
+          ></a-entity>
+        </script> 
+        
+        <script id="colorsky" type="text/html">
+          <a-entity 
+            class="colorsky"
+            geometry="primitive: sphere; radius: 30"
+            material="shader: flat; side: double; transparent: true; src: ${color}"
+            mixin="random"
+            animation__rotate="property: rotation; to: 0 0 0; dur: 15200; easing: easeInOutElastic; elasticity: 200; startEvents: rotate"
+            proxy-event="event: animationcomplete__rotate; to: .trouble; as: appearstart"
+          ></a-entity>
+        </script> 
+        
+        <script id="bgsky" type="text/html">
+          <a-entity 
+            class="bgsky"
+            geometry="primitive: sphere; radius: 35"
+            material="shader: flat; side: double; transparent: true; src: ${bg}"
+          ></a-entity>
+        </script> 
+        
+        <script id="heronlink" type="text/html">
+          <a-entity
+            class="link"
+            mixin="hover"
+            geometry="primitive: plane; height: 3; width: 3"
+            material="shader: flat; side: double; transparent: true; src: ${thumb}"
+            event-set__click="_target: ${classlink}; _delay: 100"
+            event-set__classchange="_event: click; class: nolink; _delay: 600"
+            animation__classchange="property: scale; startEvents: click; easing: easeInOutElastic; dur: 600; to: 1 1 1"
+            proxy-event="event: click; to: ${classlink}; as: rotate"
+            sound="on: click; src: #click-sound"
+          ></a-entity>
+        </script>
+        <!--
+        <script id="trouble" type="text/html">
+          <a-entity 
+            class="trouble"
+            mixin="hover"
+            geometry="primitive: plane; height: 2.5; width: 2"
+            material="shader: flat; side: double; transparent: true; opacity: .77; src: #troubleimg"
+            animation__appear="property: position; from: 0 -15 0; to: -2 1.5 -0.5; dur: 2400; easing: easeInOutElastic; elasticity: 400; startEvents: appearstart"
+            event-set__classtolink="_event: animationcomplete__appear; class: link"
+            sound="on: click; src: #click-sound"
+            look-at="[camera]"
+          ></a-entity>
+        </script>
+        -->
+        <a-mixin id="random" random-rotation></a-mixin>
+        
+        <a-mixin id="hover" 
+            event-set__mouseenter="scale: 1.5 1.5 1; material.blending: subtractive"
+            event-set__mouseleave="scale: 1 1 1; material.blending: normal"></a-mixin>
+        
+      </a-assets>
+      
+      <!-- Colors and textures. -->
+      
+      <a-entity id="sky">
+        <a-entity template="src: #bgsky" data-bg="#background"></a-entity>
+        <a-entity template="src: #colorsky" data-color="#grey"></a-entity>
+        <a-entity template="src: #colorsky" data-color="#purp"></a-entity>
+        <a-entity template="src: #colorsky" data-color="#blue"></a-entity>
+        <a-entity template="src: #colorsky" data-color="#pink"></a-entity>
+        <a-entity template="src: #texturesky" data-texture="#grey-texture"></a-entity>
+        <a-entity template="src: #texturesky" data-texture="#purp-texture"></a-entity>
+        <a-entity template="src: #texturesky" data-texture="#pink-texture"></a-entity>
+        <a-entity template="src: #texturesky" data-texture="#blue-texture"></a-entity>
+      </a-entity>
+      
+      <!-- Herons -->  
+      <a-entity id="herons">
+        <a-entity id="textureheron" template="src: #heronlink" data-thumb="#heron" data-classlink=".texturesky" position="7 2 -2.5" rotation="0 -25 0"></a-entity>
+        <a-entity id="skyheron" template="src: #heronlink" data-thumb="#heron" data-classlink=".colorsky" position="2.5 1 5" rotation="0 45 0"></a-entity>
+      </a-entity>
+      
+      <!-- Trouble -->
+      <a-entity template="src: #trouble"></a-entity>
+      
+      <!-- Camera + cursor. -->
+      <a-camera look-controls wasd-controls="enabled: false">
+        <a-cursor
+          id="cursor"
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; from: 0.1 0.1 0.1; to: 3 3 3; dur: 400"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 3 3 3; to: 0.1 0.1 0.1"
+          animation__mouseleavescale="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 400; to: 3 3 3"
+          animation__mouseentercolor="startEvents: mouseenter; property: components.material.material.color; type: color; to: springgreen; dur: 200; easing: easeInCubic"
+          animation__mouseleavecolor="startEvents: mouseleave; property: components.material.material.color; type: color; to: black; dur: 300; easing: easeInCubic"
+          scale="3 3 3"
+          opacity=".55"
+          raycaster="objects: .link">
+        </a-cursor> 
+      </a-camera> 
+    </a-scene>
+  </body>
+</html>

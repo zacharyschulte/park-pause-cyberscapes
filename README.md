@@ -1,2 +1,3 @@
-# park-pause-memoryscapes
-WebVR memoryscapes developed with A-Frame.
+# Park Pause
+
+Built with [A-Frame](https://aframe.io)
