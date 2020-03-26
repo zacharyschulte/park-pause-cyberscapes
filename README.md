@@ -1,4 +1,4 @@
-# Park Pause
+# Park Pause Cyberscapes
 
 Digital memoryscapes and dreamscapes developed with the [A-Frame](https://aframe.io) javascript WebVR framework.
 
