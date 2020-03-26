@@ -1,3 +1,3 @@
 # Park Pause
 
-Built with [A-Frame](https://aframe.io)
+WebVR memoryscapes developed with [A-Frame](https://aframe.io)
