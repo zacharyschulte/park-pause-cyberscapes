@@ -4,7 +4,7 @@
             font-family: 'Inter', Helvetica, Arial, sans-serif;
             text-rendering: optimizeLegibility;
             font-size: 90%;
-            max-width: 38rem;
+            max-width: 75vw;
             padding: 1.5rem;
             line-height: 1.75;
             margin: auto;
@@ -12,6 +12,12 @@
             color: #111111;
             background-color:#E8FDF5;
         }
+
+        @media only screen and (min-width: 770px){
+    body {
+      max-width: 55vw;
+    }
+  }
         header {
             text-align: center;
             font-size: .75rem;
@@ -44,7 +50,13 @@
         ul {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
+            grid-gap: 1.5rem;
+            padding-inline-start: unset;
+            text-align: center;
+            list-style-type:none;
+        }
+        ul li {
+            margin: 1rem;
         }
         ul.writing li:not(:first-of-type) {
             padding-top: 1rem;
