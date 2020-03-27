@@ -1,158 +1,256 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Park Pause Cyberscapes Index</title>
     <meta name="description" content="Park Pause Cyberscapes Index">
     <link rel="stylesheet" href="/index.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
-     <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
-     <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link> 
-  </head>
-  <body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
+    </link>
+</head>
+
+<body>
     <header>
-      <h1>
-      Park Pause
-        <br>Cyberscapes Index
-      </h1>
-      <p>
-        Computer caprices of living places
-      </p>
-      </header>
-   <p>
-     Park Pause connects residents to infrastructure with viewpoints of select public parks. We foreground the places where memories form, are shaped into monuments, and re-enacted through events. In the USA, people in power decide the sites of a public park, what monuments are situated there, and what events take place. We can take that power and use it cultivate to true common places that compel casual appreciation, direct engagement, and cooperative ownership.
-<br><br>
-Park Pause is an open, cyber-physical participatory project. This particular site hosts an index of digital environments inspired by particular public parks.
+        <h1>
+            Park Pause
+            <br>Cyberscapes Index
+        </h1>
+        <p>
+            Computer caprices of living places
+        </p>
+    </header>
+    <p>
+        Park Pause connects residents to infrastructure with viewpoints of select public parks. We foreground the places
+        where memories form, are shaped into monuments, and re-enacted through events. In the USA, people in power
+        decide the sites of a public park, what monuments are situated there, and what events take place. We can take
+        that power and use it cultivate to true common places that compel casual appreciation, direct engagement, and
+        cooperative ownership.
+        <br><br>
+        Park Pause is an open, cyber-physical participatory project. This site hosts an index of digital environments
+        inspired by particular public parks.
     </p>
-     
+
     <h2>
-      Monuments & Events
-  </h2>
-  <p>
-    Public parks shape personal memories, personal memories dance with public memory, and soon a mythology arises. That mythology can be enacted through monuments and events: a statue, a tire swing, a game of tag, or a bazaar. These all provide common meaning within each individual's interaction with the park's landscape. 
-  <br><br>
-    Monuments are a type of sympathetic magic that propel public memory. They look like objects such as sculptures, signage, paved paths, and gardens. Events are the rituals that charge the magic of monuments. They are collective experiences enacted by groups with common traits. 
-  </p>
-  <h2>
-      Cyberscapes of Memories & Dreams
-  </h2>  
-<p>
-  The following realms are charged with the unending creative potential of dreams. 
-  These digital environments exist as event-monuments: interactive places that people can visit simultaneously through the magic mirror of a computer screen.
-  <h3>
-    Memoryscapes: The Four Smallest Parks in Houston
-  </h3>
-  Click the link to visit the memoryscape. Find the heron to help re-build the scaffolding of each memory.
-     <ul>
-       <li>  <a href="/shiffick">      
-  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
-    <scene>
-       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
-       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
-       <transform DEF='couch'>
-       <transform scale='3,3,3'>
-		<shape>
-		   <appearance>
-      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fshiffick360purp.png?v=1578605122574"><ImageTexture/>
-			 <material diffuseColor='1 0 0'></material> 
-		   </appearance> 
-		   <sphere></sphere> 
-		</shape> 
-       </transform>
-       </transform>
-       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
-    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
- 
-    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
-    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
-	   </scene> 
-	</x3d> Shiffick Park</a></li>
-       <li><a href="/smith">  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
-    <scene>
-       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
-       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
-       <transform DEF='couch'>
-       <transform scale='3,3,3'>
-		<shape>
-		   <appearance>
-      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360blue.png?v=1574791874402"><ImageTexture/>
-			 <material diffuseColor='1 0 0'></material> 
-		   </appearance> 
-		   <sphere></sphere> 
-		</shape> 
-       </transform>
-       </transform>
-       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
-    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
- 
-    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
-    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
-	   </scene> 
-	</x3d>Smith Park</a></li>
-       <li><a href="/gregg">  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
-    <scene>
-       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
-       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
-       <transform DEF='couch'>
-       <transform scale='3,3,3'>
-		<shape>
-		   <appearance>
-      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fgregg360pink.png?v=1578605944983"><ImageTexture/>
-			 <material diffuseColor='1 0 0'></material> 
-		   </appearance> 
-		   <sphere></sphere> 
-		</shape> 
-       </transform>
-       </transform>
-       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
-    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
- 
-    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
-    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
-	   </scene> 
-	</x3d>Gregg Street Park</a></li>
-       <li><a href="/sanfelipe">  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
-    <scene>
-       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
-       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
-       <transform DEF='couch'>
-       <transform scale='3,3,3'>
-		<shape>
-		   <appearance>
-      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fparksanfelipe360grey.png?v=1578606315894"><ImageTexture/>
-			 <material diffuseColor='1 0 0'></material> 
-		   </appearance> 
-		   <sphere></sphere> 
-		</shape> 
-       </transform>
-       </transform>
-       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
-    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
- 
-    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
-    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
-	   </scene> 
-	</x3d>The Park at San Felipe</a></li>
-    </ul>
-    These memoryscapes were intially developed during the <a href="https://www.welcometomyhomepage.net/about-residency">Welcome to My Homepage</a> residency in January 2020.
-    </p>
-       <h2>
-      How to Park Pause
+        Monuments & Events
     </h2>
     <p>
-    Go to a public park, then:
-      <ol>
-        <li>Read the landscape.</li>
-        <li>Document the place.</li>
-        <li>Dream about it.</li>
-        <li>Using the previous steps, create art.</li>
-      </ol>
+        Public parks shape personal memories. Personal memories interact with public memory in a dance named mythology.
+        People manifest mythology through monuments and events. Monuments and events provide common meaning for each
+        individual's interaction with a park's landscape.
+        <br><br>
+        Monuments are a type of sympathetic magic that propels public memory. They look like objects such as sculptures,
+        tire swings, signage, paved paths, and gardens. Events are the rituals that charge the magic of monuments. They
+        are enacted by groups with common traits. They look like collective experiences such as a game of tag, a bazaar,
+        a parade, a music festival.
     </p>
-<br>
+    <h2>
+        Cyberscapes of Memories & Dreams
+    </h2>
+    <p>
+        These digital environments exist as event-monuments: interactive places that people can visit simultaneously
+        through the magic mirror of a computer screen.
+        <h3>
+            The Four Smallest Parks in Houston
+        </h3>
+        <h4>
+            Memoryscapes
+        </h4>
+        Click the link to enter the memoryscape. Each memory starts as a chaotic mess. Find the heron to reassemble the
+        memoryscape.
+        <ul>
+            <li> <a id="cyberscape-thumb" href="/shiffick">
+                    <x3d showProgress='false' disableTouch='true' disableKeys='true' disableDoubleClick='true'
+                        disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'>
+                        <scene>
+                            <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+                            <TouchSensor enabled='false' metadata='X3DMetadataObject'></TouchSensor>
+                            <transform DEF='3dthumbnail'>
+                                <transform scale='3,3,3'>
+                                    <shape>
+                                        <appearance>
+                                            <ImageTexture
+                                                url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fshiffick360purp.png?v=1578605122574">
+                                                <ImageTexture />
+                                                <material diffuseColor='1 0 0'></material>
+                                        </appearance>
+                                        <sphere></sphere>
+                                    </shape>
+                                </transform>
+                            </transform>
+                            <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+                            <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1'
+                                keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'>
+                            </orientationInterpolator>
+
+                            <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings'
+                                toField='set_fraction'></ROUTE>
+                            <ROUTE fromNode='spinThings' fromField='value_changed' toNode='3dthumbnail'
+                                toField='set_rotation'></ROUTE>
+                        </scene>
+                    </x3d> Shiffick Park
+                </a></li>
+            <li><a id="cyberscape-thumb" href="/smith">
+                    <x3d showProgress='false' disableTouch='true' disableKeys='true' disableDoubleClick='true'
+                        disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'>
+                        <scene>
+                            <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+                            <TouchSensor enabled='false' metadata='X3DMetadataObject'></TouchSensor>
+                            <transform DEF='3dthumbnail'>
+                                <transform scale='3,3,3'>
+                                    <shape>
+                                        <appearance>
+                                            <ImageTexture
+                                                url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360blue.png?v=1574791874402">
+                                                <ImageTexture />
+                                                <material diffuseColor='1 0 0'></material>
+                                        </appearance>
+                                        <sphere></sphere>
+                                    </shape>
+                                </transform>
+                            </transform>
+                            <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+                            <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1'
+                                keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'>
+                            </orientationInterpolator>
+
+                            <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings'
+                                toField='set_fraction'></ROUTE>
+                            <ROUTE fromNode='spinThings' fromField='value_changed' toNode='3dthumbnail'
+                                toField='set_rotation'></ROUTE>
+                        </scene>
+                    </x3d>Smith Park
+                </a></li>
+            <li><a id="cyberscape-thumb" href="/gregg">
+                    <x3d showProgress='false' disableTouch='true' disableKeys='true' disableDoubleClick='true'
+                        disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'>
+                        <scene>
+                            <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+                            <TouchSensor enabled='false' metadata='X3DMetadataObject'></TouchSensor>
+                            <transform DEF='3dthumbnail'>
+                                <transform scale='3,3,3'>
+                                    <shape>
+                                        <appearance>
+                                            <ImageTexture
+                                                url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fgregg360pink.png?v=1578605944983">
+                                                <ImageTexture />
+                                                <material diffuseColor='1 0 0'></material>
+                                        </appearance>
+                                        <sphere></sphere>
+                                    </shape>
+                                </transform>
+                            </transform>
+                            <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+                            <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1'
+                                keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'>
+                            </orientationInterpolator>
+
+                            <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings'
+                                toField='set_fraction'></ROUTE>
+                            <ROUTE fromNode='spinThings' fromField='value_changed' toNode='3dthumbnail'
+                                toField='set_rotation'></ROUTE>
+                        </scene>
+                    </x3d>Gregg Street Park
+                </a></li>
+            <li>
+                <a id="cyberscape-thumb" href="/sanfelipe">
+                    <x3d showProgress='false' disableTouch='true' disableKeys='true' disableDoubleClick='true'
+                        disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'>
+                        <scene>
+                            <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+                            <TouchSensor enabled='false' metadata='X3DMetadataObject'></TouchSensor>
+                            <transform DEF='3dthumbnail'>
+                                <transform scale='3,3,3'>
+                                    <shape>
+                                        <appearance>
+                                            <ImageTexture
+                                                url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fparksanfelipe360grey.png?v=1578606315894">
+                                                <ImageTexture />
+                                                <material diffuseColor='1 0 0'></material>
+                                        </appearance>
+                                        <sphere></sphere>
+                                    </shape>
+                                </transform>
+                            </transform>
+                            <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+                            <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1'
+                                keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'>
+                            </orientationInterpolator>
+
+                            <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings'
+                                toField='set_fraction'></ROUTE>
+                            <ROUTE fromNode='spinThings' fromField='value_changed' toNode='3dthumbnail'
+                                toField='set_rotation'></ROUTE>
+                        </scene>
+                    </x3d>The Park at San Felipe
+                </a></li>
+        </ul>
+    </p>
+    <h4>
+        Dreamscapes
+    </h4>
+    <p>
+        Click the link to wander through the dream versions of the four smallest parks in Houston. This experience does
+        not work on mobile.
+    </p>
+    <ul>
+        <li> <a id="cyberscape-thumb" href="https://itch.io/embed-upload/1928012?color=6a289e">
+                <x3d showProgress='false' disableTouch='true' disableKeys='true' disableDoubleClick='true'
+                    disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'>
+                    <scene>
+                        <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+                        <TouchSensor enabled='false' metadata='X3DMetadataObject'></TouchSensor>
+                        <transform DEF='3dthumbnail'>
+                            <transform scale='3,3,3'>
+                                <shape>
+                                    <appearance>
+                                        <ImageTexture
+                                            url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Ftree.png?v=1585335346999">
+                                            <ImageTexture />
+                                            <material diffuseColor='1 0 0'></material>
+                                    </appearance>
+                                    <Plane solid='false'></Plane>
+                                </shape>
+                            </transform>
+                        </transform>
+                        <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+                        <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1'
+                            keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'>
+                        </orientationInterpolator>
+
+                        <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'>
+                        </ROUTE>
+                        <ROUTE fromNode='spinThings' fromField='value_changed' toNode='3dthumbnail'
+                            toField='set_rotation'>
+                        </ROUTE>
+                    </scene>
+                </x3d> Houston Dream Realms
+            </a>
+    </ul>
+    These cyberscapes were intially developed during the <a
+        href="https://www.welcometomyhomepage.net/about-residency">Welcome to My Homepage</a> residency in January
+    2020.
+    <h2>
+        How to Park Pause
+    </h2>
+    <p>
+        Go to a public park, then:
+        <ol>
+            <li>Read the landscape.</li>
+            <li>Document the place.</li>
+            <li>Dream about it.</li>
+            <li>Create art using the previous steps.</li>
+        </ol>
+    </p>
+    <br>
     <hr>
 
-<footer>
-  2020 Park Pause & <a href="https://zacharyschulte.com/">Zachary Schulte</a>
-</footer>
-  </body>
+    <footer>
+        2020 Park Pause & <a href="https://zacharyschulte.com/">Zachary Schulte</a>
+    </footer>
+</body>
+
 </html>

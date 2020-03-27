@@ -23,7 +23,7 @@
             font-size: .75rem;
             font-weight: bold;
         }
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-weight: 300;
           text-decoration: underline;
         }
@@ -73,8 +73,17 @@
         }
 
 X3D, x3d {
+    width:5rem;
+    height:5rem;
     cursor:pointer;
+    justify-self: center;
 }
+  @media only screen and (min-width: 770px){
+    X3D, x3d {
+    width:10rem;
+    height:10rem;
+    }
+  }
 
 X3D:hover, 
 x3d:hover, 
@@ -96,4 +105,8 @@ x3d:hover,
 .x3dom-canvas-mousedown {
   cursor:-webkit-grabbing;
   cursor:grabbing;
+}
+
+#cyberscape-thumb {
+  display:inline-grid;
 }
