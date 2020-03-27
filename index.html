@@ -5,6 +5,9 @@
     <title>Park Pause Cyberscapes Index</title>
     <meta name="description" content="Park Pause Cyberscapes Index">
     <link rel="stylesheet" href="/index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+     <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
+     <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link> 
   </head>
   <body>
     <header>
@@ -41,10 +44,95 @@ Park Pause is an open, cyber-physical participatory project. This particular si
   </h3>
   Click the link to visit the memoryscape. Find the heron to help re-build the scaffolding of each memory.
      <ul>
-       <li><a href="https://park-pause.glitch.me/shiffick">Shiffick Park</a></li>
-       <li><a href="https://park-pause.glitch.me/smith">Smith Park</a></li>
-       <li><a href="https://park-pause.glitch.me/gregg">Gregg Street Park</a></li>
-       <li><a href="https://park-pause.glitch.me/sanfelipe">The Park at San Felipe</a></li>
+       <li>  <a href="/shiffick">      
+  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
+    <scene>
+       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
+       <transform DEF='couch'>
+       <transform scale='3,3,3'>
+		<shape>
+		   <appearance>
+      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fshiffick360purp.png?v=1578605122574"><ImageTexture/>
+			 <material diffuseColor='1 0 0'></material> 
+		   </appearance> 
+		   <sphere></sphere> 
+		</shape> 
+       </transform>
+       </transform>
+       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+ 
+    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
+	   </scene> 
+	</x3d> Shiffick Park</a></li>
+       <li><a href="/smith">  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
+    <scene>
+       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
+       <transform DEF='couch'>
+       <transform scale='3,3,3'>
+		<shape>
+		   <appearance>
+      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fsmith360blue.png?v=1574791874402"><ImageTexture/>
+			 <material diffuseColor='1 0 0'></material> 
+		   </appearance> 
+		   <sphere></sphere> 
+		</shape> 
+       </transform>
+       </transform>
+       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+ 
+    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
+	   </scene> 
+	</x3d>Smith Park</a></li>
+       <li><a href="/gregg">  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
+    <scene>
+       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
+       <transform DEF='couch'>
+       <transform scale='3,3,3'>
+		<shape>
+		   <appearance>
+      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fgregg360pink.png?v=1578605944983"><ImageTexture/>
+			 <material diffuseColor='1 0 0'></material> 
+		   </appearance> 
+		   <sphere></sphere> 
+		</shape> 
+       </transform>
+       </transform>
+       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+ 
+    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
+	   </scene> 
+	</x3d>Gregg Street Park</a></li>
+       <li><a href="/sanfelipe">  <x3d width='10rem' height='10rem' disableTouch='true' disableKeys='true' disableDoubleClick='true' disableMiddleDrag='true' disableRightDrag='true' disableLeftDrag='true'> 
+    <scene>
+       <NavigationInfo explorationMode="none" type='NONE'></NavigationInfo>
+       <TouchSensor enabled='false' metadata='X3DMetadataObject' ></TouchSensor>
+       <transform DEF='couch'>
+       <transform scale='3,3,3'>
+		<shape>
+		   <appearance>
+      <ImageTexture url="https://cdn.glitch.com/a79bc0a1-bf63-47a6-bb38-6f9450b9a6d2%2Fparksanfelipe360grey.png?v=1578606315894"><ImageTexture/>
+			 <material diffuseColor='1 0 0'></material> 
+		   </appearance> 
+		   <sphere></sphere> 
+		</shape> 
+       </transform>
+       </transform>
+       <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+    <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+ 
+    <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='couch' toField='set_rotation'></ROUTE>
+	   </scene> 
+	</x3d>The Park at San Felipe</a></li>
     </ul>
     These memoryscapes were intially developed during the <a href="https://www.welcometomyhomepage.net/about-residency">Welcome to My Homepage</a> residency in January 2020.
     </p>
